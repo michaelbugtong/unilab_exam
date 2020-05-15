@@ -1,5 +1,11 @@
 # unilab_exam
 
+# to access the site here is the authentication
+```
+User Name: admin
+password: pass
+```
+
 ## Project setup
 ```
 npm install
