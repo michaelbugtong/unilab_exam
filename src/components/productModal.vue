@@ -25,7 +25,7 @@
               <div class="modal-footer">
                 <slot name="footer">
                   
-                  <button @click="close">
+                  <button @click="close" class="btnClose">
                     Cancel
                   </button>
                 </slot>
@@ -135,5 +135,27 @@ export default {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+.btn {
+    background: #fff;
+    font-size: 10px;
+    color: rgb(15, 139, 21);
+    border: 1;
+    padding: 5px 33px;
+    border-radius: 5%;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .btnClose {
+    background: #fff;
+    font-size: 10px;
+    color: rgb(9, 51, 167);
+    border: 1;
+    padding: 5px 47px;
+    border-radius: 5%;
+    cursor: pointer;
+    margin-top: -40px;
+  }
 
 </style>

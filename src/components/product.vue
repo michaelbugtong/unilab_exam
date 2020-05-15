@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Product</h1>
-        <button @click="addProduct()" >Add Product</button>
+        <button @click="addProduct()" class="add">Add Product</button>
         <div v-for="list in product" v-bind:key="list.id">
             <productItem v-bind:list="list" v-on:del-prod="$emit('del-prod', list.id)"/>
         </div>
@@ -44,5 +44,14 @@ export default {
 </script>
 
 <style scoped>
-
+.add {
+    background: #fff;
+    font-size: 20px;
+    color: rgb(15, 139, 21);
+    border: 1;
+    padding: 5px 9px;
+    border-radius: 5%;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
 </style>

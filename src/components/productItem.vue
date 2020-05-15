@@ -3,24 +3,23 @@
 
     <div class="product-item">
         <p v-on:click="editItems(list)">{{ list.name + ' | ' + list.description + ' | ' + list.category}}
-            <button @click="$emit('del-prod', list.id)" class="del">x</button>
+            <button @click="$emit('del-prod', list.id)" class="del">Delete</button>
         </p>
         
     </div>
-    <productModal v-show="isModalVisible" @close="closeModal"/>
     </div>
 </template>
 
 <script>
 
-import productModal from "./productModal.vue";
+//import productModal from "./productModal.vue";
 
 export default {
     name: "productItem",
     props: ["list"],
-    components: {
+    /*components: {
         productModal
-    },
+    },*/
     data () {
       return {
         isModalVisible: false,
@@ -59,11 +58,11 @@ export default {
   }
 
   .del {
-    background: #ff0000;
+    background: #100ea8;
     color: #fff;
     border: none;
     padding: 5px 9px;
-    border-radius: 50%;
+    border-radius: 10%;
     cursor: pointer;
     float: right;
   }
