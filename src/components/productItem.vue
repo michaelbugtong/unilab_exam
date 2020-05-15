@@ -2,7 +2,7 @@
     <div>
 
     <div class="product-item">
-        <p v-on:click="editItems(list)">{{ list.description }}
+        <p v-on:click="editItems(list)">{{ list.name + ' | ' + list.description + ' | ' + list.category}}
             <button @click="$emit('del-prod', list.id)" class="del">x</button>
         </p>
         

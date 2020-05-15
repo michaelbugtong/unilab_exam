@@ -52,8 +52,19 @@ export default {
         this.$emit('close');
       },
       addProd(e) {
-           e.preventDefault();
-        this.$emit('addProd');
+            e.preventDefault();
+            const today = new Date();
+            const timestamp = today.getFullYear()+""+(today.getMonth()+1)+""+today.getDate()+""+today.getHours()+""+today.getMinutes()+""+today.getSeconds();
+            
+          const newProd = {
+              id: timestamp, 
+              name: this.name,
+              description: this.description,
+              category: this.category
+          }
+          
+          this.$emit('add-prod', newProd);
+          this.$emit('close');
       }
     },
 }
